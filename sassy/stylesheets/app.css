@@ -7216,3 +7216,14 @@ a.th {
 .f-dropdown.large {
   max-width: 800px;
 }
+
+/* line 58, ../sass/app.scss */
+h1 {
+  font-size: 50px;
+  color: red;
+}
+
+/* line 67, ../sass/app.scss */
+nav ul li {
+  display: inline;
+}
