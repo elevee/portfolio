@@ -7223,7 +7223,11 @@ body {
   background-color: #ecf0f1;
 }
 
-/* line 73, ../sass/app.scss */
+/* line 71, ../sass/app.scss */
+.nameplate {
+  background-image: url(images/newsletter_headline1.gif);
+}
+/* line 75, ../sass/app.scss */
 .nameplate h1 {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -7231,12 +7235,12 @@ body {
   text-shadow: 3px -3px 0px #f55200;
   color: white;
 }
-/* line 81, ../sass/app.scss */
+/* line 83, ../sass/app.scss */
 .nameplate h4 {
   text-align: center;
 }
 
-/* line 90, ../sass/app.scss */
+/* line 92, ../sass/app.scss */
 nav ul li {
   display: inline;
 }
