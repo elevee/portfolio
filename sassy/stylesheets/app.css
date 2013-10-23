@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,700,500);
 /*! normalize.css v2.1.1 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
@@ -7217,13 +7218,25 @@ a.th {
   max-width: 800px;
 }
 
-/* line 58, ../sass/app.scss */
-h1 {
-  font-size: 50px;
-  color: red;
+/* line 67, ../sass/app.scss */
+body {
+  background-color: #ecf0f1;
 }
 
-/* line 67, ../sass/app.scss */
+/* line 73, ../sass/app.scss */
+.nameplate h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 118px;
+  text-shadow: 3px -3px 0px #f55200;
+  color: white;
+}
+/* line 81, ../sass/app.scss */
+.nameplate h4 {
+  text-align: center;
+}
+
+/* line 90, ../sass/app.scss */
 nav ul li {
   display: inline;
 }

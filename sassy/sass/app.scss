@@ -54,10 +54,33 @@
 // @import "foundation/components/tooltips";
 // @import "foundation/components/dropdown";
 
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,700,500);
 
-h1 {
-	font-size: 50px;
-	color: red;
+// Fonts
+	$font-stack: 'Roboto', sans-serif;
+
+// Color Palette
+	$background: #ecf0f1;
+	$accent: #F55200;
+
+
+body{
+	background-color: $background;
+}
+
+.nameplate{
+
+	h1 {
+	font-family: $font-stack;
+	font-weight: 500;
+	font-size: 118px;
+	text-shadow: 3px -3px 0px $accent;
+	color: white;
+	}
+
+	h4 {
+		text-align: center;
+	}
 }
 
 nav {
