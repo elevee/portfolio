@@ -87,18 +87,32 @@ body{
 }
 
 .background_image {
-	border-top: 10px solid black;
-	border-bottom: 10px solid black;
 	max-width: 1360px;
 	position: relative;
+
+	img {
+		border-top: 10px solid black;
+		border-bottom: 10px solid black;
+	}
+
 }
 
 nav {
 
+position: absolute;
+right: 36;
+top: 0;
+
 	ul {
 		
+		// font-size: 40px;
+
 		li {
-			display: inline;
+			list-style-type: none;
+			line-height: 30px;
+			padding-right: 30px;
+			border: 1px solid $accent;
+			background-color: $accent;
 		}
 	}
 }

@@ -6610,17 +6610,17 @@ ul.pagination li {
 /* line 39, ../../../../../../opt/boxen/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_side-nav.scss */
 .side-nav li {
   margin: 0 0 0.4375em 0;
-  font-size: 0.875em;
+  font-size: 2.5em;
 }
 /* line 43, ../../../../../../opt/boxen/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_side-nav.scss */
 .side-nav li a {
   display: block;
-  color: #2ba6cb;
+  color: white;
 }
 /* line 48, ../../../../../../opt/boxen/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_side-nav.scss */
 .side-nav li.active > a:first-child {
   color: #4d4d4d;
-  font-weight: bold;
+  font-weight: regular;
 }
 /* line 53, ../../../../../../opt/boxen/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_side-nav.scss */
 .side-nav li.divider {
@@ -7243,13 +7243,26 @@ body {
 
 /* line 89, ../sass/app.scss */
 .background_image {
-  border-top: 10px solid black;
-  border-bottom: 10px solid black;
   max-width: 1360px;
   position: relative;
 }
+/* line 93, ../sass/app.scss */
+.background_image img {
+  border-top: 10px solid black;
+  border-bottom: 10px solid black;
+}
 
 /* line 100, ../sass/app.scss */
+nav {
+  position: absolute;
+  right: 36;
+  top: 0;
+}
+/* line 110, ../sass/app.scss */
 nav ul li {
-  display: inline;
+  list-style-type: none;
+  line-height: 30px;
+  padding-right: 30px;
+  border: 1px solid #f55200;
+  background-color: #f55200;
 }
