@@ -51,9 +51,11 @@ $em-base: 16 !default;
 
 $default-float: left;
 
+$font-stack: "Roboto", "Helvetica Neue", sans-serif;
+
 // $body-bg: #fff;
 // $body-font-color: #222;
-// $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-font-family: $font-stack;
 // $body-font-weight: normal;
 // $body-font-style: normal;
 
@@ -160,7 +162,7 @@ $row-width: emCalc(1300);
 
 // Control header font styles
 
-// $header-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$header-font-family: $font-stack;
 // $header-font-weight: bold;
 // $header-font-style: normal;
 // $header-font-color: #222;

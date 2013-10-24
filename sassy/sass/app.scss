@@ -57,7 +57,7 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,700,500);
 
 // Fonts
-	$font-stack: 'Roboto', sans-serif;
+	$font-stack: "Roboto", "Helvetica Neue", sans-serif;
 
 // Color Palette
 	$background: #ecf0f1;
@@ -66,10 +66,10 @@
 
 body{
 	background-color: $background;
+	font-family: $font-stack;
 }
 
-#dontwearitout {
-	font-family: $font-stack;
+#dontwearitout {	
 	font-weight: 500;
 	font-size: 118px;
 	text-shadow: 3px -3px 0px $accent;
@@ -88,6 +88,8 @@ body{
 
 .background_image {
 	max-width: 1360px;
+	margin: 0;
+	padding: 0;
 	position: relative;
 
 	img {
@@ -101,7 +103,7 @@ nav {
 
 position: absolute;
 right: 36;
-top: 0;
+top: 15;
 
 	ul {
 		

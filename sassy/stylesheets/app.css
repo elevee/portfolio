@@ -434,7 +434,7 @@ body {
   color: #222222;
   padding: 0;
   margin: 0;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", "Helvetica Neue", sans-serif;
   font-weight: normal;
   font-style: normal;
   line-height: 1;
@@ -2038,7 +2038,7 @@ p aside {
 /* Default header styles */
 /* line 181, ../../../../../../opt/boxen/rbenv/versions/2.0.0-p0/lib/ruby/gems/2.0.0/gems/zurb-foundation-4.3.1/scss/foundation/components/_type.scss */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", "Helvetica Neue", sans-serif;
   font-weight: bold;
   font-style: normal;
   color: #222222;
@@ -7221,11 +7221,11 @@ a.th {
 /* line 67, ../sass/app.scss */
 body {
   background-color: #ecf0f1;
+  font-family: "Roboto", "Helvetica Neue", sans-serif;
 }
 
-/* line 71, ../sass/app.scss */
+/* line 72, ../sass/app.scss */
 #dontwearitout {
-  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 118px;
   text-shadow: 3px -3px 0px #f55200;
@@ -7244,21 +7244,23 @@ body {
 /* line 89, ../sass/app.scss */
 .background_image {
   max-width: 1360px;
+  margin: 0;
+  padding: 0;
   position: relative;
 }
-/* line 93, ../sass/app.scss */
+/* line 95, ../sass/app.scss */
 .background_image img {
   border-top: 10px solid black;
   border-bottom: 10px solid black;
 }
 
-/* line 100, ../sass/app.scss */
+/* line 102, ../sass/app.scss */
 nav {
   position: absolute;
   right: 36;
-  top: 0;
+  top: 15;
 }
-/* line 110, ../sass/app.scss */
+/* line 112, ../sass/app.scss */
 nav ul li {
   list-style-type: none;
   line-height: 30px;
