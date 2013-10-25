@@ -7224,7 +7224,7 @@ body {
   font-family: "Roboto", "Helvetica Neue", sans-serif;
 }
 
-/* line 72, ../sass/app.scss */
+/* line 75, ../sass/app.scss */
 #dontwearitout {
   font-weight: 500;
   font-size: 118px;
@@ -7234,33 +7234,33 @@ body {
   padding: 0px;
 }
 
-/* line 83, ../sass/app.scss */
+/* line 85, ../sass/app.scss */
 .title {
   font-weight: 200;
   font-size: 30px;
   padding-left: 10px;
 }
 
-/* line 89, ../sass/app.scss */
+/* line 91, ../sass/app.scss */
 .background_image {
   max-width: 1360px;
   margin: 0;
   padding: 0;
   position: relative;
 }
-/* line 95, ../sass/app.scss */
+/* line 97, ../sass/app.scss */
 .background_image img {
   border-top: 10px solid black;
   border-bottom: 10px solid black;
 }
 
-/* line 102, ../sass/app.scss */
+/* line 104, ../sass/app.scss */
 nav {
   position: absolute;
   right: 36;
   top: 15;
 }
-/* line 112, ../sass/app.scss */
+/* line 114, ../sass/app.scss */
 nav ul li {
   list-style-type: none;
   line-height: 30px;
@@ -7272,14 +7272,14 @@ nav ul li {
 /* ============================================================================================================================
 == OVER THOUGHT BUBBLE, EMPTY, WITH BORDER (more CSS3)
 ** ============================================================================================================================ */
-/* line 126, ../sass/app.scss */
+/* line 128, ../sass/app.scss */
 .thought_container {
   position: absolute;
   top: 20%;
   left: 19%;
 }
 
-/* line 132, ../sass/app.scss */
+/* line 134, ../sass/app.scss */
 .oval-thought-border {
   position: relative;
   padding: 70px 30px;
@@ -7304,7 +7304,7 @@ nav ul li {
 }
 
 /* creates the larger circle */
-/* line 156, ../sass/app.scss */
+/* line 158, ../sass/app.scss */
 .oval-thought-border:before {
   content: "";
   position: absolute;
@@ -7324,7 +7324,7 @@ nav ul li {
 }
 
 /* creates the smaller circle */
-/* line 175, ../sass/app.scss */
+/* line 177, ../sass/app.scss */
 .oval-thought-border:after {
   content: "";
   position: absolute;
@@ -7341,4 +7341,11 @@ nav ul li {
   border-radius: 25px;
   /* reduce the damage in FF3.0 */
   display: block;
+}
+
+@media all and (max-width: 770px) {
+  /* line 198, ../sass/app.scss */
+  .oval-thought-border {
+    visibility: hidden;
+  }
 }

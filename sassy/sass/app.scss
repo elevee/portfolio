@@ -69,6 +69,9 @@ body{
 	font-family: $font-stack;
 }
 
+//Mobile Header
+// INSERT HERE
+
 #dontwearitout {	
 	font-weight: 500;
 	font-size: 118px;
@@ -77,8 +80,7 @@ body{
 	margin-bottom: -20px;
 	padding: 0px;
 
-	
-	}
+}
 
 .title {
 	font-weight: 200;
@@ -190,7 +192,8 @@ top: 15;
     display:block; 
  }
 
-// @media all and (max-width: 420px) {
+@media all and (max-width: 770px) {
 // 	.small { display: block; }
 // 	.large { display: none; }
-// }
+	.oval-thought-border { visibility: hidden; }
+}
