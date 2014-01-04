@@ -23,10 +23,8 @@ function displayLocation(position) {
 	div.innerHTML = "You are at Latitude: " + latitude + ", Longitude " + longitude;
 
 	var km = computeDistance(position.coords, sampleCoords);
-	console.log(km);
 	var distance = document.getElementById("distance");
-	console.log(distance);
-	distance.innerHTML = "You are " + km + "km away from WickedlySmart HQ. Whatever that means...";
+	distance.innerHTML = "You are " + km + " km away from WickedlySmart HQ. Whatever that means...";
 }
 
 function displayError(error) {
