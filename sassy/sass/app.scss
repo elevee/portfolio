@@ -74,7 +74,7 @@ body{
 
 #dontwearitout {	
 	font-weight: 500;
-	font-size: 118px;
+	font-size: 90px;
 	text-shadow: 3px -3px 0px $accent;
 	color: white;
 	margin-bottom: -20px;
@@ -101,22 +101,26 @@ body{
 
 }
 
-nav {
-
-position: absolute;
-right: 36;
-top: 15;
+.nav {
 
 	ul {
 		
-		// font-size: 40px;
+		list-style-type: none;
+		width: 700px;
+		margin: 0, auto;
 
 		li {
-			list-style-type: none;
+			text-align: center;
+			font-size: 40px;
+			display: inline;
 			line-height: 30px;
-			padding-right: 30px;
+			padding-right: 3px;
 			border: 1px solid $accent;
 			background-color: $accent;
+
+			a {
+				color: #FFF;
+			}
 		}
 	}
 }
