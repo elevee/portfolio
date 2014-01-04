@@ -16,8 +16,6 @@ var sampleCoords = {
 function displayLocation(position) {
 	var latitude = position.coords.latitude;
 	var longitude = position.coords.longitude;
-	console.log(latitude);
-	console.log(longitude);
 
 	var div = document.getElementById("location");
 	div.innerHTML = "You are at Latitude: " + latitude + ", Longitude " + longitude;
