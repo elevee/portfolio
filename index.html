@@ -14,15 +14,15 @@
 	<body>
 		
 		<header>
-			<div class="row">
-				<h1 id="dontwearitout">REAL TALK RIGHT QUICK</h1>
+			<div class="row large-centered">
+				<h1 class="dontwearitout">REAL TALK RIGHT QUICK</h1>
 			</div>
 			<div class="row">
 				<h4 class="title">adventures in web dev, and the blogfolio of Eric Levine</h4>
 			</div>
 		</header>
 
-		<div class="row nav">
+		<div class="row nav small-centered">
 			<ul>
 				<li class="large-3 columns"><a href="#">work</a></li>
 				<li class="large-3 columns"><a href="#">resume</a></li>
@@ -31,46 +31,26 @@
 			</ul>
 		</div>
 
-
-		<div class="row">
-			<div class="large-12 columns background_image">
-				<img src="images/van_eric.jpg" alt="Eric being introspective">
-				<div class="thought_container">
-					<span class="oval-thought-border thought_bubble">Yeahahhhhhhhh It's a party in the USA</span>
+		<section class="work">
+			<h3></h3>
+			<div class="row">
+				<div class="large-4 columns">
+					bleh
 				</div>
-				<nav>
-
-				</nav>	
+				<div class="large-4 columns">
+					bleh
+				</div>
+				<div class="large-4 columns">
+					bleh
+				</div>
 			</div>
-		</div>
-
-		<div class="row">
-			<header class=""><!-- subsection? -->
-				<h4 class="title">work</h4>
-			</header>
-		</div>
-		
-		<div class="row">
-		<div class="section-container accordion" data-section="accordion">
-		  <section class="active">
-		    <p class="title" data-section-title><a href="#">Section 1</a></p>
-		    <div class="content" data-section-content>
-		      <p>Content of section 1.</p>
-		    </div>
-		  </section>
-		  <section>
-		    <p class="title" data-section-title><a href="#">Section 2</a></p>
-		    <div class="content" data-section-content>
-		      <p>Content of section 2.</p>
-		    </div>
-		  </section>
-		</div>
-		</div>
+			
+		</section>
 
 	<!-- FitText -->
 		<script src="javascripts/jquery.fittext.js"></script>
 		<script type="text/javascript">
-  			$("#dontwearitout").fitText(1, { minFontSize: '60px', maxFontSize: '90px' });
+  			$(".dontwearitout").fitText(1, { minFontSize: '60px', maxFontSize: '90px' });
   			$(".title").fitText(3, { minFontSize: '25px', maxFontSize: '35px' });
 		</script>
 
