@@ -2,7 +2,12 @@ window.onload = getMyLocation;
 
 function getMyLocation() {
 	if (navigator.geolocation) {
-		navigator.geolocation.getCurrentPosition(displayLocation, displayError);
+		// navigator.geolocation.getCurrentPosition(displayLocation, displayError);
+		var watchButton = document.getElementById("watch");
+		watchButton.onclick = watchLocation;
+		var clearWatchButton = document.getElementById("clearWatch");
+		clearWatchButton.onclick = clearWatch;
+
 	} else {
 		alert("Oops, no geolocation support.");
 	}
@@ -26,9 +31,27 @@ function displayLocation(position) {
 	var distance = document.getElementById("distance");
 	distance.innerHTML = "You are " + km + " km away from the Hockey Hall of Fame in Toronnnnnno!";
 
-	showMap(position.coords);
+	if (map == null) {
+		showMap(position.coords);
+	}
 
+};
+
+var watchId = null;
+
+function watchLocation() {
+	console.log("watchLocation was clicked");
+	watchId = navigator.geolocation.watchPosition(displayLocation, displayError);
 }
+
+function clearWatch() {
+	console.log("clearWatch was clicked");
+	if (watchId) {
+		navigator.geolocation.clearWatch(watchId);
+		watchId = null;
+	}
+}
+
 
 function displayError(error) {
 	var errorTypes = {
