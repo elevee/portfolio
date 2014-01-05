@@ -8,10 +8,11 @@ function getMyLocation() {
 	}
 }
 
-var sampleCoords = {
-	latitude: 47.624851,
-	longitude: -122.52099
+var hockeyHallOfFame = {
+	latitude: 43.64699,
+	longitude: -79.37726
 };
+
 
 function displayLocation(position) {
 	var latitude = position.coords.latitude;
@@ -20,9 +21,9 @@ function displayLocation(position) {
 	var div = document.getElementById("location");
 	div.innerHTML = "You are at Latitude: " + latitude + ", Longitude " + longitude;
 
-	var km = computeDistance(position.coords, sampleCoords);
+	var km = computeDistance(position.coords, hockeyHallOfFame);
 	var distance = document.getElementById("distance");
-	distance.innerHTML = "You are " + km + " km away from WickedlySmart HQ. Whatever that means...";
+	distance.innerHTML = "You are " + km + " km away from the Hockey Hall of Fame in Toronnnnnno!";
 
 	showMap(position.coords);
 
