@@ -18,6 +18,7 @@ var hockeyHallOfFame = {
 	longitude: -79.37726
 };
 
+var prevCoords = null;
 
 function displayLocation(position) {
 	var latitude = position.coords.latitude;
@@ -33,8 +34,13 @@ function displayLocation(position) {
 
 	if (map == null) {
 		showMap(position.coords);
+		prevCoords = position.coords;
 	} else {
-		scrollMapToPosition(position.coords);
+		var meters = computeDistance(position.coords, prevCoords) * 1000;
+		if (meters > 20) {
+			scrollMapToPosition(position.coords);
+			prevCoords = position.coords;
+		}
 	}
 
 };
