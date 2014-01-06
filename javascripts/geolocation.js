@@ -33,6 +33,8 @@ function displayLocation(position) {
 
 	if (map == null) {
 		showMap(position.coords);
+	} else {
+		scrollMapToPosition(position.coords);
 	}
 
 };
