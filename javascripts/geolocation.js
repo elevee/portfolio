@@ -37,15 +37,30 @@ function displayLocation(position) {
 
 };
 
+function scrollMapToPosition(coords) {
+	var latitude = coords.latitude;
+	var longitude = coords.longitude;
+	var latlong = new google.maps.LatLng(latitude, longitude);
+
+	map.panTo(latlong);
+
+	addMarker(map, latlong, "Your new location", "You moved to: " + latitude + 
+				", " + longitude);
+}
+
 var watchId = null;
 
 function watchLocation() {
-	console.log("watchLocation was clicked");
-	watchId = navigator.geolocation.watchPosition(displayLocation, displayError);
+	var options = {
+		timeout: 5000
+	}
+
+	watchId = navigator.geolocation.watchPosition(displayLocation, 
+												displayError, 
+												options);
 }
 
 function clearWatch() {
-	console.log("clearWatch was clicked");
 	if (watchId) {
 		navigator.geolocation.clearWatch(watchId);
 		watchId = null;
