@@ -8,6 +8,8 @@ window.onload = function() {
 		//need a 2D context to draw something
 		var context = canvas.getContext("2d");
 		var selectObj = document.getElementById("shape");
+		fillBackgroundColor(canvas, context);
+
 		var index = selectObj.selectedIndex;
 		var shape = selectObj[index].value;
 
@@ -27,16 +29,13 @@ window.onload = function() {
 		context.fillRect(x, y, w, w);
 	}
 
-
-
-
-	if (canvas.getContext) {
-		//browser has canvas support
-		
-		context.fillRect(10, 10, 100, 100);
-	} else {
-		//broser doesn't support canvas
+	function fillBackgroundColor(canvas, context) {
+		var selectObj = document.getElementById("backgroundColor");
+		var index = selectObj.selectedIndex;
+		var bgColor = selectObj.options[index].value;
+		context.fillStyle = bgColor;
+		context.fillRect(0, 0, canvas.width, canvas.height);
 	}
-	
+
 
 }
