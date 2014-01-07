@@ -18,6 +18,12 @@ window.onload = function() {
 				drawSquare(canvas, context);
 			}
 		}
+
+		if (shape == "circles") {
+			for (var circles = 0; circles < 20; circles++) {
+				drawCircle(canvas, context);
+			}
+		}
 	}
 
 	function drawSquare(canvas, context) {
@@ -27,6 +33,21 @@ window.onload = function() {
 
 		context.fillStyle = "lightblue";
 		context.fillRect(x, y, w, w);
+	}
+
+	function degreesToRadians(degrees) {
+		return (degrees * Math.PI)/180;
+	}
+
+	function drawCircle(canvas, context) {
+		var radius = Math.floor(Math.random() * 30);
+		var x = Math.floor(Math.random() * canvas.width);
+		var y = Math.floor(Math.random() * canvas.height);
+
+		context.beginPath();
+		context.arc(x, y, radius, 0, degreesToRadians(360), true);
+		context.fillStyle = "lightblue";
+		context.fill();
 	}
 
 	function fillBackgroundColor(canvas, context) {
