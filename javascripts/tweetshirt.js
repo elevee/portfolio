@@ -8,7 +8,7 @@ window.onload = function() {
 		var context = canvas.getContext("2d");
 		context.fillRect(10, 10, 100, 100);
 	} else {
-		canvas.innerHTML("<p>You straight-up don't have canvas support. Please update your browser! :)</p>");
+		//broser doesn't support canvas
 	}
 		
 
