@@ -1,7 +1,10 @@
 (function($) {
 	
+
+	window.App = {};
+
 	//Model for a project
-	var Project = Backbone.Model.extend({
+	App.Project = Backbone.Model.extend({
 		defaults: {
 			title: "New Project",
 			scope: "What I did",
@@ -10,12 +13,12 @@
 	});
 
 	//A list of Projects
-	window.ProjectsCollection = Backbone.Collection.extend({
-		model: Project
+	App.ProjectsCollection = Backbone.Collection.extend({
+		model: App.Project
 
 	});
 
-	var projectsCollection = new ProjectsCollection([
+	App.projectsCollection = new App.ProjectsCollection([
 		{
 			title: "MeUndies", 
 			scope: "Homepage Redesign, other updates", 
@@ -35,31 +38,26 @@
 	]);
 
 	//View for all Projects - Navbar
-	window.ProjectsListView = Backbone.View.extend({
+	App.ProjectsListView = Backbone.View.extend({
 		tagName: 'ul',
 
 		// template: _.template( $('.trythis').html() ),
 
 		render: function() {
 			// filter through all items in a collection
+			// for each, create a new ProjectView
+			// append to root element
 
 			this.collection.each(function(project) {
-				var projectView = new ProjectItemView({ model: project });
+				var projectView = new App.ProjectItemView({ model: project });
 				this.$el.append(projectView.render().el);
 			}, this);
 
-			// var el = $('.trythis').html();
-			// projectsCollection_.each(project) {
-			// 	var proj = new ProjectView(project);
-			// 	this.$el. append(proj);
-			// };
-			// for each, create a new ProjectView
-			// append to root element
 			return this;
 		}
 	});
 
-	window.ProjectItemView = Backbone.View.extend({
+	App.ProjectItemView = Backbone.View.extend({
 
 		className: 'project',
 
@@ -72,10 +70,9 @@
 		}
 	});
 
-	// project = new Project;
-	var projectsListView = new ProjectsListView({ collection: projectsCollection });
+	App.projectsListView = new App.ProjectsListView({ collection: App.projectsCollection });
 	// $('#projectContainer').append(projectView.render().el)
-	$('.trythis').append(projectsListView.render().el)
+	$('.projectItemView').append(App.projectsListView.render().el)
 	// $(document.body).append(projectsListView.render().el);
 
 
