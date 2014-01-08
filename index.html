@@ -9,6 +9,17 @@
   		<link href="sassy/stylesheets/app.css" media="screen, projector, print" rel="stylesheet" type="text/css" />
 
 		<title>Real Talk Right Quick | Eric Levine | Web Developer</title>
+
+		<!-- Backbone Templates -->
+		<script type="text/template" id="projectView">
+			<span class="project-title"><%= title %></span>
+			<span class="project-scope"><%= scope %></span>
+			<ul class="techs">
+				<% _.each(techs, function(tech) { %>
+					<li><%= tech %></li>
+				<% }); %>
+			</ul>
+		</script>
 	
 	</head>
 	<body>
@@ -26,8 +37,8 @@
 			<ul>
 				<li class="large-3 columns"><a href="#">work</a></li>
 				<li class="large-3 columns"><a href="#">resume</a></li>
+				<li class="large-3 columns"><a href="#">blog</a></li>
 				<li class="large-3 columns"><a href="#">twitter</a></li>
-				<li class="large-3 columns"><a href="#">Link 4</a></li>
 			</ul>
 		</div>
 
@@ -35,16 +46,21 @@
 			<h3></h3>
 			<div class="row">
 				<div class="large-4 columns">
-					bleh
+					<span>MeUndies</span>
 				</div>
 				<div class="large-4 columns">
-					bleh
+					<span>BlockTalk</span>
 				</div>
 				<div class="large-4 columns">
-					bleh
+					<span>Penguin Postman</span>
 				</div>
 			</div>
 			
+		</section>
+
+		<section id="projectContainer" class="row">
+			bleh
+			<p>stupid</p>
 		</section>
 
 	<!-- FitText -->
@@ -53,6 +69,11 @@
   			$(".dontwearitout").fitText(1, { minFontSize: '60px', maxFontSize: '90px' });
   			$(".title").fitText(3, { minFontSize: '25px', maxFontSize: '35px' });
 		</script>
+
+	<!-- My own JS -->
+		<script src="./javascripts/index.js" type="text/javascript"></script>
+
+	
 
 	</body>
 </html>

@@ -58,5 +58,9 @@ window.onload = function() {
 		context.fillRect(0, 0, canvas.width, canvas.height);
 	}
 
+	function updateTweets() {
+		console.log(this);
+	}
+
 
 }
