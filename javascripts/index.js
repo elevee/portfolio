@@ -16,5 +16,10 @@
 	});
 
 
+	project = new Project({title: "MeUndies", scope: "Homepage Redesign, other updates", techs: ["spree", "jQuery", "Rails"]});
+	projectView = new ProjectView({model: project});
+	$('#projectContainer').append(projectView.render().el)
+
+
 })(jQuery);
 	

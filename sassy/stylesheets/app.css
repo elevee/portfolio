@@ -6220,6 +6220,7 @@ body {
 
 .nav {
   background-color: #f55200;
+  whitespace: nowrap;
 }
 .nav ul {
   list-style-type: none;
@@ -6235,4 +6236,10 @@ body {
 }
 .nav ul li a {
   color: #FFF;
+}
+
+.work {
+  color: white;
+  background-color: black;
+  padding-top: 5px;
 }

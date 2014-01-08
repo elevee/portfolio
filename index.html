@@ -12,13 +12,13 @@
 
 		<!-- Backbone Templates -->
 		<script type="text/template" id="projectView">
-			<span class="project-title"><%= title %></span>
-			<span class="project-scope"><%= scope %></span>
+			<h2 class="project-title"><%= title %></h2>
 			<ul class="techs">
 				<% _.each(techs, function(tech) { %>
 					<li><%= tech %></li>
 				<% }); %>
 			</ul>
+			<span class="project-scope"><%= scope %></span>
 		</script>
 	
 	</head>
@@ -59,8 +59,7 @@
 		</section>
 
 		<section id="projectContainer" class="row">
-			bleh
-			<p>stupid</p>
+			
 		</section>
 
 	<!-- FitText -->
