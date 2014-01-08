@@ -1,10 +1,14 @@
 (function($) {
 	
 
-	window.App = {};
+	window.App = {
+		Models: {},
+		Collections: {},
+		Views: {}
+	};
 
 	//Model for a project
-	App.Project = Backbone.Model.extend({
+	App.Models.Project = Backbone.Model.extend({
 		defaults: {
 			title: "New Project",
 			scope: "What I did",
@@ -13,12 +17,12 @@
 	});
 
 	//A list of Projects
-	App.ProjectsCollection = Backbone.Collection.extend({
-		model: App.Project
+	App.Collections.Projects = Backbone.Collection.extend({
+		model: App.Models.Project
 
 	});
 
-	App.projectsCollection = new App.ProjectsCollection([
+	App.Collections.projects = new App.Collections.Projects([
 		{
 			title: "MeUndies", 
 			scope: "Homepage Redesign, other updates", 
@@ -38,7 +42,7 @@
 	]);
 
 	//View for all Projects - Navbar
-	App.ProjectsListView = Backbone.View.extend({
+	App.Views.ProjectsList = Backbone.View.extend({
 		tagName: 'ul',
 
 		// template: _.template( $('.trythis').html() ),
@@ -49,7 +53,7 @@
 			// append to root element
 
 			this.collection.each(function(project) {
-				var projectView = new App.ProjectItemView({ model: project });
+				var projectView = new App.Views.ProjectItem({ model: project });
 				this.$el.append(projectView.render().el);
 			}, this);
 
@@ -57,7 +61,7 @@
 		}
 	});
 
-	App.ProjectItemView = Backbone.View.extend({
+	App.Views.ProjectItem = Backbone.View.extend({
 
 		className: 'project',
 
@@ -70,9 +74,9 @@
 		}
 	});
 
-	App.projectsListView = new App.ProjectsListView({ collection: App.projectsCollection });
+	App.Views.projectsList = new App.Views.ProjectsList({ collection: App.Collections.projects });
 	// $('#projectContainer').append(projectView.render().el)
-	$('.projectItemView').append(App.projectsListView.render().el)
+	$('.projectItemView').append(App.Views.projectsList.render().el)
 	// $(document.body).append(projectsListView.render().el);
 
 
