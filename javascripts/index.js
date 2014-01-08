@@ -35,14 +35,16 @@
 	]);
 
 	//View for all Projects - Navbar
-	window.ProjectsView = Backbone.View.extend({
-		template: _.template( $('.trythis').html() ),
+	window.ProjectsListView = Backbone.View.extend({
+		tagName: 'ul',
+
+		// template: _.template( $('.trythis').html() ),
 
 		render: function() {
 			// filter through all items in a collection
 
 			this.collection.each(function(project) {
-				var projectView = new ProjectView({ model: project });
+				var projectView = new ProjectItemView({ model: project });
 				this.$el.append(projectView.render().el);
 			}, this);
 
@@ -57,10 +59,11 @@
 		}
 	});
 
-	window.ProjectView = Backbone.View.extend({
+	window.ProjectItemView = Backbone.View.extend({
+
 		className: 'project',
 
-		template: _.template( $('#projectView').html() ),
+		template: _.template( $('#projectItemView').html() ),
 
 		render: function() {
 			var renderedContent = this.template( this.model.toJSON() );
@@ -70,9 +73,10 @@
 	});
 
 	// project = new Project;
-	var projectsView = new ProjectsView({ collection: projectsCollection });
+	var projectsListView = new ProjectsListView({ collection: projectsCollection });
 	// $('#projectContainer').append(projectView.render().el)
-	$(document.body).append(projectsView.render().el);
+	$('.trythis').append(projectsListView.render().el)
+	// $(document.body).append(projectsListView.render().el);
 
 
 
