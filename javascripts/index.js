@@ -4,8 +4,26 @@
 	window.App = {
 		Models: {},
 		Collections: {},
-		Views: {}
+		Views: {},
+		Router: {}
 	};
+
+	var vent = _.extend({}, Backbone.Events);
+
+	App.Router = Backbone.Router.extend({
+		routes: {
+			'': 'index',
+			'project/:id': 'showProject'
+		},
+
+		index: function() {
+			console.log("Hello from the index page");
+		},
+
+		showProject: function(projectId) {
+			vent.trigger('project:show', projectId);
+		}
+	});
 
 	//Model for a project
 	App.Models.Project = Backbone.Model.extend({
@@ -22,7 +40,7 @@
 
 	});
 
-	App.Collections.projects = new App.Collections.Projects([
+	var projects = new App.Collections.Projects([
 		{
 			title: "MeUndies", 
 			scope: "Homepage Redesign, other updates", 
@@ -47,6 +65,19 @@
 
 		// template: _.template( $('.trythis').html() ),
 
+		initialize: function() {
+			vent.on('project:show', this.show, this);
+		},
+
+		show: function() {
+			console.log('shit be renderin!');
+			var proj = this.collection.get("id");
+			console.log(this.collection);
+			var projView = new App.Views.ProjectDetail({ model: proj });
+
+			console.log( projView.render().el );
+		},
+
 		render: function() {
 			// filter through all items in a collection
 			// for each, create a new ProjectView
@@ -54,7 +85,7 @@
 
 			this.collection.each(function(project) {
 				var projectView = new App.Views.ProjectItem({ model: project });
-				this.$el.append(projectView.render().el);
+				this.$el.append( projectView.render().el );
 			}, this);
 
 			return this;
@@ -67,6 +98,18 @@
 
 		template: _.template( $('#projectItemView').html() ),
 
+		events: {
+			'click': 'displayProject'
+		},
+
+		displayProject: function() {
+			console.log(this.model.toJSON() );
+			var projectDetail = new App.Views.ProjectDetail({ model: this.model });
+			console.log(projectDetail.template( this.model.toJSON() ) );
+			// projectView.render().el;
+
+		},
+
 		render: function() {
 			var renderedContent = this.template( this.model.toJSON() );
 			this.$el.html(renderedContent);
@@ -74,11 +117,27 @@
 		}
 	});
 
-	App.Views.projectsList = new App.Views.ProjectsList({ collection: App.Collections.projects });
-	// $('#projectContainer').append(projectView.render().el)
-	$('.projectItemView').append(App.Views.projectsList.render().el)
-	// $(document.body).append(projectsListView.render().el);
+	App.Views.ProjectDetail = Backbone.View.extend({
 
+		className: 'project_detail',
+
+		template: _.template( $('#projectContainer').html() ),
+
+		render: function() {
+			var renderedContent = this.template( this.model.toJSON() );
+            this.$el.html(renderedContent);
+			return this;
+		}
+	});
+
+	new App.Router;
+	Backbone.history.start();
+
+	var projectsList = new App.Views.ProjectsList({ collection: projects });
+	// $('#projectContainer').append(projectView.render().el)
+	$('.projectItemView').append(projectsList.render().el)
+
+	
 
 
 })(jQuery);
