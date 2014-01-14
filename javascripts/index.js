@@ -44,16 +44,19 @@
 	var projects = new App.Collections.Projects([
 		{
 			title: "MeUndies", 
+			image: "meundies_logo.jpg",
 			scope: "Homepage Redesign, other updates", 
 			techs: ["spree", "jQuery", "Rails"]
 		},
 		{
 			title: "BlockTalk",
+			image: "blocktalk_logo.png",
 			scope: "Blocktalk and stuff having to do with it",
 			techs: ["jQuery", "Rails"]
 		},
 		{
 			title: "Penguin Postman",
+			image: "penguinpostman_logo.jpg",
 			scope: "Penguin Postman and stuff having to do with it",
 			techs: ["Rails", "Stripe API"]
 		}
@@ -63,8 +66,6 @@
 	//View for all Projects - Navbar
 	App.Views.ProjectsList = Backbone.View.extend({
 		tagName: 'ul',
-
-		// template: _.template( $('.trythis').html() ),
 
 		initialize: function() {
 			vent.on('project:show', this.show, this);
@@ -140,7 +141,6 @@
 	var projectsList = new App.Views.ProjectsList({ collection: projects });
 	// $('#projectContainer').append(projectView.render().el)
 	$('.projectItemView').append( projectsList.render().el )
-
 	
 
 
