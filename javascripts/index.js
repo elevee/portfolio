@@ -108,7 +108,7 @@
 			var projectDetail = new App.Views.ProjectDetail({ model: this.model });
 			// console.log(projectDetail.template( this.model.toJSON() ) );
 			// projectView.render().el;
-			$('#projectContainer').append( projectDetail.render().el );
+			$('#projectContainer').html( projectDetail.render().el );
 
 		},
 
