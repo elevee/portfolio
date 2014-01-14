@@ -6255,3 +6255,25 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
+.project_detail .project-title {
+  margin-bottom: 0px;
+}
+.project_detail .project-techs {
+  list-style-type: none;
+  color: gray;
+}
+.project_detail .project-techs li {
+  display: inline;
+  padding-right: 4px;
+}
+.project_detail .project-techs li:after {
+  content: '|';
+  vertical-align: center;
+  padding-left: 5px;
+  font-size: 20px;
+  color: #f55200;
+}
+.project_detail .project-techs li:last-child:after {
+  content: '';
+}
