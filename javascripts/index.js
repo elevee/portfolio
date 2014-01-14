@@ -36,7 +36,8 @@
 
 	//A list of Projects
 	App.Collections.Projects = Backbone.Collection.extend({
-		model: App.Models.Project
+		model: App.Models.Project,
+		firebase: new Backbone.Firebase("http://eleveeportfolio.firebaseio.com/projects")
 
 	});
 
