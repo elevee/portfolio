@@ -106,8 +106,9 @@
 		displayProject: function() {
 			console.log(this.model.toJSON() );
 			var projectDetail = new App.Views.ProjectDetail({ model: this.model });
-			console.log(projectDetail.template( this.model.toJSON() ) );
+			// console.log(projectDetail.template( this.model.toJSON() ) );
 			// projectView.render().el;
+			$('#projectContainer').append( projectDetail.render().el );
 
 		},
 
@@ -122,7 +123,7 @@
 
 		className: 'project_detail',
 
-		template: _.template( $('#projectContainer').html() ),
+		template: _.template( $('#projectView').html() ),
 
 		render: function() {
 			var renderedContent = this.template( this.model.toJSON() );
@@ -134,9 +135,11 @@
 	new App.Router;
 	Backbone.history.start();
 
+	// projects.fetch();
+
 	var projectsList = new App.Views.ProjectsList({ collection: projects });
 	// $('#projectContainer').append(projectView.render().el)
-	$('.projectItemView').append(projectsList.render().el)
+	$('.projectItemView').append( projectsList.render().el )
 
 	
 
