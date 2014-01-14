@@ -141,6 +141,14 @@
 	var projectsList = new App.Views.ProjectsList({ collection: projects });
 	// $('#projectContainer').append(projectView.render().el)
 	$('.projectItemView').append( projectsList.render().el )
+
+	//Drop down for projects
+	var $workButton = $(".nav a").first();
+	var $workBar = $('.work');
+	$workButton.on('click', function(){
+		$workBar.slideToggle();	
+	});
+	
 	
 
 
