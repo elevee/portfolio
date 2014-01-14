@@ -63,6 +63,14 @@
 	$background: #ecf0f1;
 	$accent: #F55200;
 
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+       -o-border-radius: $radius;
+          border-radius: $radius;
+}
+
 
 body{
 	background-color: $background;
@@ -115,5 +123,9 @@ body{
 	color: white;
 	background-color: black;
 	padding-top: 5px;
+
+	img {
+		@include border-radius(75px);
+	}
 }
 

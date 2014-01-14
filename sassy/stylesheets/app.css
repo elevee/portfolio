@@ -6243,3 +6243,10 @@ body {
   background-color: black;
   padding-top: 5px;
 }
+.work img {
+  -webkit-border-radius: 75px;
+  -moz-border-radius: 75px;
+  -ms-border-radius: 75px;
+  -o-border-radius: 75px;
+  border-radius: 75px;
+}
