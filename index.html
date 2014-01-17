@@ -25,13 +25,17 @@
 		</script>
 
 		<script type="text/template" id="projectView">
-			<h2 class="project-title"><%= title %></h2>
-			<ul class="project-techs large-offset-1">
+			<h2 class="project-title large-offset-2"><%= title %></h2>
+			<ul class="project-techs large-offset-3">
 				<% _.each(techs, function(tech) { %>
 					<li><%= tech %></li>
 				<% }); %>
 			</ul>
-			<span class="project-scope"><%= scope %></span>
+			<span class="project-scope large-offset-2"><%= scope %></span>
+			<div class="row showcase large-offset-2">
+				<img data-interchange="[/path/to/default.jpg, (default)], [/path/to/bigger-image.jpg, (large)]">
+				<noscript><img src="/path/to/default.jpg"></noscript>
+			</div>
 		</script>
 	
 	</head>

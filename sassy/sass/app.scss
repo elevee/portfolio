@@ -137,7 +137,7 @@ body{
 .project_detail {
 
 	.project-title {
-		margin-bottom: 0px;
+		margin-bottom: -15px;
 	}
 
 	.project-techs {
@@ -165,6 +165,15 @@ body{
 
 	.project-scope {
 		
+	}
+
+	.showcase {
+		img {
+			border: 1px solid black;
+			width: 400px;
+			height: 550px;
+			margin: 10px;
+		}
 	}
 
 }
