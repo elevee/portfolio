@@ -6279,9 +6279,12 @@ body {
 .project_detail .project-techs li:last-child:after {
   content: '';
 }
+.project_detail .project-scope {
+  margin-bottom: 20px;
+}
 .project_detail .nivoSlider {
-  max-width: 700px;
+  max-width: 826px;
 }
 .project_detail .nivo-controlNav {
-  max-width: 700px;
+  max-width: 826px;
 }
