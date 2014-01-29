@@ -44,28 +44,45 @@
 	var projects = new App.Collections.Projects([
 		{
 			title: "MeUndies", 
-			image: { 
-				logo: "meundies_logo.jpg",
-				showcase: "mu-site.png"
-				},
+			logo: "meundies_logo.jpg",
+			slider: [
+					{
+						image: "mu-site.png",
+						caption: "startin off the hollas"
+					},
+					{
+						image: "mu-site.png",
+						caption: "more hollas"
+					},
+					{
+						image: "mu-site.png",
+						caption: "fend off the hollas"
+					}		
+				],
 			scope: "Homepage Redesign, other updates", 
 			techs: ["spree", "jQuery", "Rails"]
 		},
 		{
 			title: "BlockTalk",
-			image: { 
-				logo: "blocktalk_logo.png",
-				showcase: "mu-site.png"
-				},
+			logo: "blocktalk_logo.png",
+			slider: [ 
+					{
+						image: "mu-site.png",
+						caption: "holla at the second caption"
+					}
+				],
 			scope: "Blocktalk and stuff having to do with it",
 			techs: ["jQuery", "Rails"]
 		},
 		{
 			title: "Penguin Postman",
-			image: { 
-				logo: "penguinpostman_logo.jpg",
-				showcase: "mu-site.png"
-				},
+			logo: "penguinpostman_logo.jpg",
+			slider: [ 
+					{
+						image: "mu-site.png",
+						caption: "additional holla."
+					}
+				],
 			scope: "Penguin Postman and stuff having to do with it",
 			techs: ["Rails", "Stripe API"]
 		}

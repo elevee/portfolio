@@ -15,7 +15,7 @@
 		<!-- Backbone Templates -->
 		<script type="text/template" id="projectItemView">
 			<div class="small-6 large-4 columns">
-				<img src="images/logos/<%= image.logo %>">
+				<img src="images/logos/<%= logo %>">
 			</div>
 			
 		</script>
@@ -37,19 +37,25 @@
 
 		        <div class="row slider-wrapper theme-default">
 		            <div id="slider" class="nivoSlider large-offset-2 large-centered">
-		                <img src="images/mu-site.png" data-thumb="images/mu-site.png" alt="" />
-		                <a href="http://dev7studios.com"><img src="images/up.jpg" data-thumb="images/up.jpg" alt="" title="This is an example of a caption" /></a>
-		                <img src="images/van_eric.jpg" data-thumb="van_eric_sm.jpg" alt="" data-transition="slideInLeft" />
-		                <img src="images/nemo.jpg" data-thumb="images/nemo.jpg" alt="" title="#htmlcaption" />
+		                <% _.each(slider, function(pic) { %>
+							<% if (pic.caption) { %>
+								<img src="images/slider/<%= pic.image %>"title="<%= pic.caption %>">
+							<% } else {%>
+								<img src="images/slider/<%= pic.image %>">
+							<% }; %>
+
+						<% }); %>
+
+		                
+		                
+		                <img src="images/van_eric.jpg" data-thumb="van_eric_sm.jpg" >
+		                <img src="images/nemo.jpg" data-thumb="images/nemo.jpg" title="#htmlcaption" />
 		            </div>
-		            <div id="htmlcaption" class="nivo-html-caption">
-		                <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="#">a link</a>. 
-		            </div>
+		            
 		        </div>
 
 		    </div>
 
-				// <img src="images/<%= image.showcase %>">
 			
 		</script>
 
