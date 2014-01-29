@@ -119,6 +119,7 @@
 			// console.log(projectDetail.template( this.model.toJSON() ) );
 			// projectView.render().el;
 			$('#projectContainer').html( projectDetail.render().el );
+			projectDetail.showSlider();
 
 		},
 
@@ -134,6 +135,10 @@
 		className: 'project_detail',
 
 		template: _.template( $('#projectView').html() ),
+
+		showSlider: function() {
+	        $('#slider').nivoSlider();
+		},
 
 		render: function() {
 			var renderedContent = this.template( this.model.toJSON() );
@@ -157,7 +162,7 @@
 	$workButton.on('click', function(){
 		$workBar.slideToggle();	
 	});
-	
+			
 	
 
 

@@ -4,7 +4,8 @@
 		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 		<script src="./javascripts/underscore-min.js" type="text/javascript"></script>
 		<script src="./javascripts/backbone-min.js" type="text/javascript"></script>
-		
+		<script src="sassy/javascripts/vendor/custom.modernizr.js" type="text/javascript"></script>
+
 		<!-- Firebase -->
 		<script src="https://cdn.firebase.com/v0/firebase.js"></script>
 		<script src="https://cdn.firebase.com/libs/backfire/0.3.0/backbone-firebase.min.js"></script>
@@ -30,10 +31,36 @@
 				<% }); %>
 			</ul>
 			<span class="project-scope large-offset-2"><%= scope %></span>
-			<div class="row showcase large-offset-2">
-				<img src="images/<%= image.showcase %>">
-			</div>
+			
+			<div id="wrapper">
+		        <a href="http://dev7studios.com" id="dev7link" title="Go to dev7studios">dev7studios</a>
+
+		        <div class="slider-wrapper theme-default">
+		            <div id="slider" class="nivoSlider">
+		                <img src="images/mu-site.png" data-thumb="images/mu-site.png" alt="" />
+		                <a href="http://dev7studios.com"><img src="images/up.jpg" data-thumb="images/up.jpg" alt="" title="This is an example of a caption" /></a>
+		                <img src="images/van_eric.jpg" data-thumb="van_eric_sm.jpg" alt="" data-transition="slideInLeft" />
+		                <img src="images/nemo.jpg" data-thumb="images/nemo.jpg" alt="" title="#htmlcaption" />
+		            </div>
+		            <div id="htmlcaption" class="nivo-html-caption">
+		                <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="#">a link</a>. 
+		            </div>
+		        </div>
+
+		    </div>
+
+				// <img src="images/<%= image.showcase %>">
+			<script type="text/javascript">
+				$(window).load(function() {
+			        $('#slider').nivoSlider();
+			    });
+			</script>
+
 		</script>
+
+		<!-- Nivo slider -->
+		<link rel="stylesheet" href="nivo-slider/nivo-slider.css" type="text/css" />
+		<script src="nivo-slider/jquery.nivo.slider.pack.js" type="text/javascript"></script>
 	
 	</head>
 	<body>
@@ -75,10 +102,20 @@
   			$(".title").fitText(3, { minFontSize: '25px', maxFontSize: '35px' });
 		</script>
 
+	<!-- Foundation -->
+		<script src="sassy/javascripts/foundation/foundation.js"></script>
+		<script src="sassy/javascripts/foundation/foundation.orbit.js"></script>	
+		<script>
+			$(document).ready(function(){
+				$(document).foundation();
+			});
+		</script>
+	
+	
+	
 	<!-- My own JS -->
 		<script src="./javascripts/index.js" type="text/javascript"></script>
 
-	
 
 	</body>
 </html>

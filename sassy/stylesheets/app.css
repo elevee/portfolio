@@ -6279,7 +6279,7 @@ body {
 .project_detail .project-techs li:last-child:after {
   content: '';
 }
-.project_detail .showcase img {
+.project_detail .slider_container img {
   border: 1px solid black;
   margin: 10px;
 }
