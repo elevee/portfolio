@@ -162,6 +162,7 @@ body{
 		li:last-child:after {
 			content: '';
 		}
+
 	
 	}
 
@@ -169,12 +170,15 @@ body{
 		
 	}
 
-	.slider_container {
-		img {
-			border: 1px solid black;
-			margin: 10px;
-		}
+
+	.nivoSlider {
+		max-width: 700px; 
 	}
 
+	.nivo-controlNav {
+		max-width: 700px;
+	}
+
+	
 }
 

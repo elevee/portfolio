@@ -141,7 +141,7 @@
         
         // Add Control nav
         if(settings.controlNav){
-            vars.controlNavEl = $('<div class="nivo-controlNav"></div>');
+            vars.controlNavEl = $('<div class="nivo-controlNav large-offset-2"></div>');
             slider.after(vars.controlNavEl);
             for(var i = 0; i < kids.length; i++){
                 if(settings.controlNavThumbs){
@@ -150,9 +150,9 @@
                     if(!child.is('img')){
                         child = child.find('img:first');
                     }
-                    if(child.attr('data-thumb')) vars.controlNavEl.append('<a class="nivo-control" rel="'+ i +'"><img src="'+ child.attr('data-thumb') +'" alt="" /></a>');
+                    if(child.attr('data-thumb')) vars.controlNavEl.append('<a class="nivo-control large-offset-2" rel="'+ i +'"><img src="'+ child.attr('data-thumb') +'" alt="" /></a>');
                 } else {
-                    vars.controlNavEl.append('<a class="nivo-control" rel="'+ i +'">'+ (i + 1) +'</a>');
+                    vars.controlNavEl.append('<a class="nivo-control large-offset-2" rel="'+ i +'">'+ (i + 1) +'</a>');
                 }
             }
 
