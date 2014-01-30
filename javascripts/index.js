@@ -53,6 +53,10 @@
 					{
 						image: "mu-pic2.png",
 						caption: "Offers section and footer"
+					},
+					{
+						image: "mu-pic3.png",
+						caption: ""
 					}
 				],
 			scope: "Implemented a homepage redesign, as well as other updates", 
