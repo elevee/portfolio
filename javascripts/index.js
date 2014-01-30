@@ -47,28 +47,36 @@
 			logo: "meundies_logo.jpg",
 			slider: [
 					{
-						image: "mu-site.png",
-						caption: "startin off the hollas"
+						image: "mu-pic1.png",
+						caption: "Homepage with full width slider"
 					},
 					{
-						image: "mu-site.png",
-						caption: "more hollas"
-					},
-					{
-						image: "mu-site.png",
-						caption: "fend off the hollas"
-					}		
+						image: "mu-pic2.png",
+						caption: "Offers section and footer"
+					}
 				],
-			scope: "Homepage Redesign, other updates", 
-			techs: ["spree", "jQuery", "Rails"]
+			scope: "Implemented a homepage redesign, as well as other updates", 
+			techs: ["Ruby on Rails", "Javascript", "jQuery", "Spree eCommerce"]
 		},
 		{
-			title: "BlockTalk",
+			title: "blocktalk",
 			logo: "blocktalk_logo.png",
 			slider: [ 
 					{
-						image: "mu-site.png",
-						caption: "holla at the second caption"
+						image: "bt-pic1.png",
+						caption: "Choose as many times as you'd like. Even time ranges. Enter your email."
+					},
+					{
+						image: "bt-pic2.png",
+						caption: "Copy your unique URL and share via email, chat, or txt"
+					},
+					{
+						image: "bt-pic3.png",
+						caption: "Your friend or colleague clicks the day/time that works best, and enters their email."
+					},
+					{
+						image: "bt-pic4.png",
+						caption: "Both parties are sent a confirmation email, with a calendar event to import to iCal, Google Calendar, or Outlook"
 					}
 				],
 			scope: "Blocktalk and stuff having to do with it",
